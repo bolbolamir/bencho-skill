@@ -1,0 +1,4 @@
+work/
+__pycache__/
+.library.lock
+.DS_Store

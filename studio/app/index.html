@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Component Studio</title>
+  <link rel="stylesheet" href="/app/studio.css">
+  <script src="/assets/lucide.js" defer></script>
+  <script src="/app/studio.js" defer></script>
+</head>
+<body>
+  <div class="studio-shell">
+    <aside class="sidebar" aria-label="Component library">
+      <a class="studio-brand" href="/" aria-label="Component Studio home"><span class="studio-mark"><i data-lucide="layers-2" aria-hidden="true"></i></span><span>Component<br><span class="brand-second">studio</span></span></a>
+      <button class="new-button" type="button" data-new><i data-lucide="plus" aria-hidden="true"></i>New component</button>
+      <div class="library-heading"><span>Collection</span><span id="library-count">0</span></div>
+      <nav id="categories" aria-label="Categories"></nav>
+      <div class="sidebar-bottom"><span class="codex-glyph"><i data-lucide="terminal" aria-hidden="true"></i></span><span>Designed with Codex<br><span class="secondary">Built to keep.</span></span></div>
+    </aside>
+
+    <main class="workspace">
+      <header class="workspace-heading"><div><h1>Your components</h1><p>A little collection of things that feel good to use.</p></div><button class="icon-button" id="theme-toggle" type="button" aria-label="Switch appearance"><i data-lucide="moon" aria-hidden="true"></i></button></header>
+      <div class="library-layout">
+        <section class="component-list-panel" aria-label="Components">
+          <label class="search"><i data-lucide="search" aria-hidden="true"></i><input type="search" id="search" placeholder="Find a component" aria-label="Find a component"></label>
+          <div class="component-list" id="component-list"></div>
+          <p class="no-results" id="no-results" hidden>No components found.</p>
+        </section>
+
+        <section class="component-detail" aria-label="Selected component">
+          <div class="detail-title-row"><div><div class="component-category" id="selected-category">Navigation</div><h2 id="selected-name">Loading collection…</h2></div><button class="icon-button" id="favorite" type="button" aria-label="Save component" aria-pressed="false"><i data-lucide="bookmark" aria-hidden="true"></i></button></div>
+          <p class="detail-description" id="selected-description"></p>
+          <div class="preview-toolbar">
+            <div class="segmented" role="group" aria-label="Component view"><button type="button" data-view="preview" aria-pressed="true">Preview</button><button type="button" data-view="code" aria-pressed="false">Code</button></div>
+            <div class="viewport-buttons" role="group" aria-label="Preview width"><button class="icon-button" type="button" data-width="fit" aria-pressed="true" aria-label="Desktop width"><i data-lucide="monitor" aria-hidden="true"></i></button><button class="icon-button" type="button" data-width="768" aria-pressed="false" aria-label="Tablet width"><i data-lucide="tablet" aria-hidden="true"></i></button><button class="icon-button" type="button" data-width="390" aria-pressed="false" aria-label="Mobile width"><i data-lucide="smartphone" aria-hidden="true"></i></button></div>
+            <button class="icon-button" type="button" id="reset-preview" aria-label="Reset preview"><i data-lucide="rotate-ccw" aria-hidden="true"></i></button>
+          </div>
+          <div class="preview-stage" id="preview-stage"><div class="preview-device" id="preview-device"><iframe id="component-preview" title="Interactive component preview" sandbox="allow-scripts allow-forms allow-downloads" referrerpolicy="no-referrer"></iframe></div></div>
+          <div class="code-stage" id="code-stage" hidden><div class="code-heading"><select id="source-files" aria-label="Source file"></select><button class="small-button" type="button" id="copy-code"><i data-lucide="copy" aria-hidden="true"></i>Copy code</button></div><pre><code id="source-code"></code></pre></div>
+          <footer class="detail-footer"><div class="revision"><i data-lucide="history" aria-hidden="true"></i><span id="one-version">Version 1 · Original</span><select id="version-select" aria-label="Component version" hidden></select></div><a class="small-button export-button" id="export" href="#"><i data-lucide="download" aria-hidden="true"></i>Export HTML</a></footer>
+          <div class="iteration-row"><span>Have another idea?</span><button class="text-button" id="refine" type="button">Refine in Codex<i data-lucide="arrow-up-right" aria-hidden="true"></i></button></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="brief-dialog" aria-labelledby="brief-title">
+    <div class="dialog-heading"><div><h2 id="brief-title">What are we making?</h2><p>Start a fresh Codex chat. Keep your collection here.</p></div><button class="icon-button" type="button" data-close aria-label="Close brief"><i data-lucide="x" aria-hidden="true"></i></button></div>
+    <label class="field"><span>Your brief</span><textarea id="brief" rows="5" placeholder="A date picker that opens like a little stack of cards…"></textarea></label>
+    <div class="prompt-preview" id="prompt-preview" hidden><label class="field"><span>Ready for Codex</span><textarea id="generated-prompt" rows="6" readonly></textarea></label></div>
+    <button class="primary-button" type="button" id="copy-prompt"><i data-lucide="copy" aria-hidden="true"></i>Copy Codex prompt</button>
+  </dialog>
+  <div class="toast" id="toast" role="status" hidden><i data-lucide="check" aria-hidden="true"></i><span></span></div>
+  <script type="application/json" id="studio-config">{"root":"studio"}</script>
+</body>
+</html>

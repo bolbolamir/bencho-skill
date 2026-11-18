@@ -1,0 +1,1527 @@
+{
+  "studied_on": "2026-11-17",
+  "source": "https://bencho.dev/",
+  "components": [
+    {
+      "name": "Income flow",
+      "slug": "income-flow",
+      "url": "https://bencho.dev/blocks/income-flow",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Ribbon thickness encodes income; hover anchors the month, and year changes reshape the entire ribbon.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Hue: Orange/Violet/Blue (default Orange); Colour: Colour/Mono (default Colour)"
+    },
+    {
+      "name": "Audio trim",
+      "slug": "wave-trim",
+      "url": "https://bencho.dev/blocks/wave-trim",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Trim handles frame a waveform; phrase snapping, scrubbing, playback and save feedback share the selection.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Effect: Card/Bars (default Card)"
+    },
+    {
+      "name": "3D bar chart",
+      "slug": "pillars",
+      "url": "https://bencho.dev/blocks/pillars",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Perspective wireframes show targets; the hovered column fills upward with the actual value.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Depth 12px"
+    },
+    {
+      "name": "Market chart",
+      "slug": "market-chart",
+      "url": "https://bencho.dev/blocks/market-chart",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Several probability lines share a scrub cursor, value tags and a faded future region.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Answers: 2/3 (default 2); Fade 88%"
+    },
+    {
+      "name": "AI Assistant",
+      "slug": "listen",
+      "url": "https://bencho.dev/blocks/listen",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A minimal assistant moves through prompt suggestions, voice activity, thinking and streamed output.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Theme: Sunset/Ocean (default Sunset); Glow 1.0"
+    },
+    {
+      "name": "FAQ frames",
+      "slug": "faq-frames",
+      "url": "https://bencho.dev/blocks/faq-frames",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Individual question cards expand while surrounding cards recede in emphasis.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fade the others; Bounce 3px"
+    },
+    {
+      "name": "Status picker",
+      "slug": "status-picker",
+      "url": "https://bencho.dev/blocks/status-picker",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A status badge expands around a glowing orb, then folds the selected status back into itself.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bounce 35; Size 128px; Hue 220°"
+    },
+    {
+      "name": "Card stack",
+      "slug": "card-stack",
+      "url": "https://bencho.dev/blocks/card-stack",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A tight photo pile spreads into a fan; selection lifts and flips a card into a larger view.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Spread 85; Bounce 5; Scatter 0; Cards 5; Corner 14"
+    },
+    {
+      "name": "Arc ring",
+      "slug": "expenses",
+      "url": "https://bencho.dev/blocks/expenses",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Rounded ring segments redistribute space around the hovered category while the center amount changes.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Thickness 38px"
+    },
+    {
+      "name": "Format bar",
+      "slug": "format-bar",
+      "url": "https://bencho.dev/blocks/format-bar",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Active formatting marks join visually; alignment and text styling animate with the toolbar.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Lean 9°"
+    },
+    {
+      "name": "Jelly tabs",
+      "slug": "jelly-tabs",
+      "url": "https://bencho.dev/blocks/jelly-tabs",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A shared selection pill changes position and width with a short, soft wobble.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Wobble 67"
+    },
+    {
+      "name": "Odds",
+      "slug": "odds",
+      "url": "https://bencho.dev/blocks/odds",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Historical probability scrubbing pairs with press-and-hold actions that move a binary split.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fill / Stroke presentation controls"
+    },
+    {
+      "name": "Progress tracker",
+      "slug": "progress-tracker",
+      "url": "https://bencho.dev/blocks/progress-tracker",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Task completion coordinates checkbox, strike-through, count and progress, with a final staggered celebration.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Sparks; Bounce 40"
+    },
+    {
+      "name": "Thinking loader",
+      "slug": "thinking-loader",
+      "url": "https://bencho.dev/blocks/thinking-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A compact status pill combines rotating marks, changing step text and a completion check.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shine; Step 2000ms"
+    },
+    {
+      "name": "Genie effect",
+      "slug": "genie",
+      "url": "https://bencho.dev/blocks/genie",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A photo expands from its dock origin and funnels back to that same slot.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 600ms"
+    },
+    {
+      "name": "Flap board",
+      "slug": "flap-board",
+      "url": "https://bencho.dev/blocks/flap-board",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Split-flap characters update with a cascading sweep; pointer movement can disturb individual flaps.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Cascade: Sweep/Scatter (default Sweep); Flap 70ms"
+    },
+    {
+      "name": "Image trail",
+      "slug": "image-trail",
+      "url": "https://bencho.dev/blocks/image-trail",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Pointer travel emits photos at distance intervals; each item has its own short exit.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Leave: Shrink/Drop (default Shrink); Spacing 80px; Size 96px"
+    },
+    {
+      "name": "Dust delete",
+      "slug": "dust-delete",
+      "url": "https://bencho.dev/blocks/dust-delete",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A destructive photo action dissolves the image into directional particles, then introduces its replacement.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Effect: Pour/Ash/Wind/Pieces (default Pour); Wind: Right/Left (default Right); Speed 60; Grain 3px"
+    },
+    {
+      "name": "Slingshot",
+      "slug": "slingshot",
+      "url": "https://bencho.dev/blocks/slingshot",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Pointer tension stretches a tether; release transfers momentum into a bouncing projectile and return.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Power 100; Bounce 30"
+    },
+    {
+      "name": "Crumpled receipt",
+      "slug": "crumple",
+      "url": "https://bencho.dev/blocks/crumple",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A paper receipt collapses into a throwable object; reaching the bin triggers a fresh receipt.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bin label; Tilt 5°; Throw 100%"
+    },
+    {
+      "name": "Price chart",
+      "slug": "price-chart",
+      "url": "https://bencho.dev/blocks/price-chart",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Scrubbing updates price and change together; range changes and line-to-candle conversion preserve continuity.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Price: Above/Below (default Above); Morph 600ms; Corner 20px"
+    },
+    {
+      "name": "Standing calendar",
+      "slug": "standing-calendar",
+      "url": "https://bencho.dev/blocks/standing-calendar",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A contribution grid can rise into a rotatable skyline with day values encoded as height.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "View: Book/Skyline (default Book); Shape: Squares/Circles (default Squares); Colour: Colour/Mono (default Colour); Wave 50; Height 60"
+    },
+    {
+      "name": "Orders globe",
+      "slug": "orders-globe",
+      "url": "https://bencho.dev/blocks/orders-globe",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A draggable dotted globe shows city shares alongside a compact time-window selector.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Rate 40; Speed 30"
+    },
+    {
+      "name": "AI autocomplete",
+      "slug": "ai-autocomplete",
+      "url": "https://bencho.dev/blocks/ai-autocomplete",
+      "catalog_gesture": "Type",
+      "behavior_notes": "Low-emphasis continuation text follows the caret and supports whole-suggestion or wordwise acceptance.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Pause 500ms; Stream 45ms"
+    },
+    {
+      "name": "Magnetic letters",
+      "slug": "magnetic-letters",
+      "url": "https://bencho.dev/blocks/magnetic-letters",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Pointer proximity controls individual letter displacement, tilt and darkness, with a spring return.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Pull 50; Reach 160px; Tilt 10°"
+    },
+    {
+      "name": "Selection actions",
+      "slug": "selection-actions",
+      "url": "https://bencho.dev/blocks/selection-actions",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Selected text owns an adjacent action pill that can expand into editing or note content.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Think 900ms"
+    },
+    {
+      "name": "Loading state",
+      "slug": "loading-state",
+      "url": "https://bencho.dev/blocks/loading-state",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A small pixel pattern, changing action label and elapsed time describe ongoing work.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Grid: Drive/Dots/Orbit (default Drive)"
+    },
+    {
+      "name": "Private balance",
+      "slug": "private-balance",
+      "url": "https://bencho.dev/blocks/private-balance",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Account swipes roll the amount; concealment progresses across digits, with a temporary hold-to-peek state.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Background: Image/Plain (default Image); Mask: Dots/Dashes/Blur (default Dots); Wave 30ms"
+    },
+    {
+      "name": "Spec inspector",
+      "slug": "spec-inspector",
+      "url": "https://bencho.dev/blocks/spec-inspector",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A dragged inspection frame reveals measurements and blueprint styling over the same live layout.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fill / Stroke presentation controls"
+    },
+    {
+      "name": "Context meter",
+      "slug": "context-meter",
+      "url": "https://bencho.dev/blocks/context-meter",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Category highlighting links legend and allocation graphic; compaction shrinks the represented context usage.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Style \"Bar\"; Colour \"Colour\""
+    },
+    {
+      "name": "Load cards",
+      "slug": "load-cards",
+      "url": "https://bencho.dev/blocks/load-cards",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Skeletons enter softly, then resolve into content in sequence with matching geometry.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Pace 380ms; Blur 6px"
+    },
+    {
+      "name": "Ink bloom",
+      "slug": "ink-bloom",
+      "url": "https://bencho.dev/blocks/ink-bloom",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The next photo spreads from the interaction point with a rough liquid boundary and lens distortion.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Edge 50; Speed 50"
+    },
+    {
+      "name": "Peek rating",
+      "slug": "peek-rating",
+      "url": "https://bencho.dev/blocks/peek-rating",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Proximity raises neighboring rating icons; the current choice grows and gains a score tooltip.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Colour/Mono (default Colour); Shape: Star/Heart (default Star); Lift 50"
+    },
+    {
+      "name": "Edge light",
+      "slug": "edge-light",
+      "url": "https://bencho.dev/blocks/edge-light",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A small illuminated rim segment follows pointer direction around the picture frame.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour; Edge 40%; Tilt 20; Glow 80"
+    },
+    {
+      "name": "Line sidebar",
+      "slug": "line-sidebar",
+      "url": "https://bencho.dev/blocks/line-sidebar",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A ruler-like contents list expands around the cursor, with shorter responses farther from it.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reach 50; Length 40"
+    },
+    {
+      "name": "Gravity tags",
+      "slug": "gravity-tags",
+      "url": "https://bencho.dev/blocks/gravity-tags",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Rigid tags or orbs fall into a pile; cursor speed determines whether they nudge or scatter.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape: Tags/Orbs (default Tags); Colour: Colour/Mono (default Colour); Gravity 1800px/s²; Push 50; Count 13"
+    },
+    {
+      "name": "Falling text",
+      "slug": "falling-text",
+      "url": "https://bencho.dev/blocks/falling-text",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A sentence breaks into physical words, allows disturbance, then reassembles into its original order.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Gravity 1800px/s²"
+    },
+    {
+      "name": "Card swap",
+      "slug": "card-swap",
+      "url": "https://bencho.dev/blocks/card-swap",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "The front photo cycles behind the stack while the remaining cards advance into the vacated depth.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Auto false; Every 4"
+    },
+    {
+      "name": "Dot swarm",
+      "slug": "dot-swarm",
+      "url": "https://bencho.dev/blocks/dot-swarm",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Dense hourly dot columns swell under the cursor and provide a local activity readout.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Mono/Colour (default Colour); Density 4; Rows 4"
+    },
+    {
+      "name": "Option wheel",
+      "slug": "option-wheel",
+      "url": "https://bencho.dev/blocks/option-wheel",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A vertical text drum keeps the selected item sharp while neighboring items rotate and blur away.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Blur 4px; Tilt 60"
+    },
+    {
+      "name": "Wake slider",
+      "slug": "wake-slider",
+      "url": "https://bencho.dev/blocks/wake-slider",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A thumb-free bar track retains a velocity-dependent wake behind a fast drag.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Bars 36; Wake 60"
+    },
+    {
+      "name": "Line sphere",
+      "slug": "line-sphere",
+      "url": "https://bencho.dev/blocks/line-sphere",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Fine lines interpolate between spherical and flat forms and part around the pointer.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reach 80%; Sway 3; Lines 720"
+    },
+    {
+      "name": "Page peel",
+      "slug": "page-peel",
+      "url": "https://bencho.dev/blocks/page-peel",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A curled corner follows a drag to expose underlying content, then settles back when released.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bounce 50; Curl 36px; Reach 50%"
+    },
+    {
+      "name": "Stacked bars",
+      "slug": "stacked-bars",
+      "url": "https://bencho.dev/blocks/stacked-bars",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Hover links a daily bar to a moving tooltip; aggregation changes regrow the data columns.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Colour \"Colour\"; Bars 20; Gap 6"
+    },
+    {
+      "name": "Network graph",
+      "slug": "blast-radius",
+      "url": "https://bencho.dev/blocks/blast-radius",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Hover reveals a node's route to the center; changing scope introduces an outer network ring.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Mono/Colour (default Colour); Reach: Near/All (default All); Shape: Circle/Square (default Circle); Counts; Corner 20px"
+    },
+    {
+      "name": "Integrations",
+      "slug": "connect-sources",
+      "url": "https://bencho.dev/blocks/connect-sources",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Tool tiles toggle connection state; their sparklines and a shared completion indicator respond together.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour: Mono/Colour (default Colour); Connected 4"
+    },
+    {
+      "name": "Blueprint loader",
+      "slug": "blueprint-loader",
+      "url": "https://bencho.dev/blocks/blueprint-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "Measured outlines establish the card layout before the finished profile surface appears.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 50"
+    },
+    {
+      "name": "AI chat input",
+      "slug": "ai-chat-input",
+      "url": "https://bencho.dev/blocks/ai-chat-input",
+      "catalog_gesture": "Type",
+      "behavior_notes": "A compact composer expands around focus; model, effort and attachment controls accompany a changing send action.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Attach; Model; Effort; Bounce 40"
+    },
+    {
+      "name": "FAQ accordion",
+      "slug": "faq-accordion",
+      "url": "https://bencho.dev/blocks/faq-accordion",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Answer height, staggered words and the expanding icon coordinate each question's open state.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "One at a time; Icon: Plus/Chevron (default Plus)"
+    },
+    {
+      "name": "Avatar group",
+      "slug": "avatar-group",
+      "url": "https://bencho.dev/blocks/avatar-group",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Overlapping faces lift with proximity while one shared tooltip moves between people.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Lift 4px; Grow 5%; Overlap 8px"
+    },
+    {
+      "name": "Profile hover card",
+      "slug": "profile-card",
+      "url": "https://bencho.dev/blocks/profile-card",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A delayed hover opens a profile from its avatar; moving across avatars changes the profile in place.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Delay 400ms; Corner 20px"
+    },
+    {
+      "name": "Resizable panels",
+      "slug": "resizable-panels",
+      "url": "https://bencho.dev/blocks/resizable-panels",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Dividers trade pane width, add resistance near minimum size and support collapsing beyond that limit.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Panels: 2/3 (default 2); Corner 20px"
+    },
+    {
+      "name": "Toast stack",
+      "slug": "toast-stack",
+      "url": "https://bencho.dev/blocks/toast-stack",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Depth-compressed notifications unfold into a spaced list, retaining independent retry and dismissal actions.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Peek 14; Gap 10; Corner 20"
+    },
+    {
+      "name": "Dot loader",
+      "slug": "dot-loader",
+      "url": "https://bencho.dev/blocks/dot-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A compact dot matrix supports several repeating illumination patterns and adjustable speed.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Pattern: 1/2/3/4 (default 2); Rounded; Speed 20"
+    },
+    {
+      "name": "Image shimmer",
+      "slug": "image-shimmer",
+      "url": "https://bencho.dev/blocks/image-shimmer",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "Moving light gives an otherwise empty image placeholder a quiet loading state.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 50; Corner 20px"
+    },
+    {
+      "name": "Shimmer text",
+      "slug": "shimmer-text",
+      "url": "https://bencho.dev/blocks/shimmer-text",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A traveling contrast band animates a short status phrase; interaction cycles the phrase.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 50"
+    },
+    {
+      "name": "Orbit cards",
+      "slug": "orbit-cards",
+      "url": "https://bencho.dev/blocks/orbit-cards",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A draggable rotating band gives front-facing cards prominence and bends the side cards away.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 40; Tilt 0°"
+    },
+    {
+      "name": "Metaballs",
+      "slug": "metaballs",
+      "url": "https://bencho.dev/blocks/metaballs",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Moving colored blobs merge and separate; the pointer contributes an additional blob.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colors: Blue/Red/Green (default Green); Speed 10; Orbs 8; Glow 0"
+    },
+    {
+      "name": "Tree view",
+      "slug": "tree-view",
+      "url": "https://bencho.dev/blocks/tree-view",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Folder rows reveal nested children under their own position while selection stays local to files.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Guides; Indent 22px; Corner 20px"
+    },
+    {
+      "name": "Access request",
+      "slug": "access-request",
+      "url": "https://bencho.dev/blocks/access-request",
+      "catalog_gesture": "Press",
+      "behavior_notes": "An avatar summary grows into requests with individual approval and rejection actions.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 90; Bounce 40; Corner 20px"
+    },
+    {
+      "name": "Code reveal",
+      "slug": "code-reveal",
+      "url": "https://bencho.dev/blocks/code-reveal",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A pointer-local transformation replaces picture detail with image-derived monochrome characters.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reach 25; Linger 50; Cell 5px; Corner 20px"
+    },
+    {
+      "name": "Budget slider",
+      "slug": "budget-slider",
+      "url": "https://bencho.dev/blocks/budget-slider",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "The selected load time controls bar emphasis and semantic green, amber or red budget feedback.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Budget 300ms"
+    },
+    {
+      "name": "Emoji reactions",
+      "slug": "emoji-reactions",
+      "url": "https://bencho.dev/blocks/emoji-reactions",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A message becomes a reaction picker; the chosen emoji travels into its chip as the count rolls.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Magnify 50; Bounce 45; Set \"Work\"; Corner 20"
+    },
+    {
+      "name": "Country wheel",
+      "slug": "country-wheel",
+      "url": "https://bencho.dev/blocks/country-wheel",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A flag drum and curved ruler combine inertial movement with a clearly fixed selection slot.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "List: Countries/Currencies (default Countries); Ruler; Curve 55; Corner 20px"
+    },
+    {
+      "name": "Folder",
+      "slug": "folder",
+      "url": "https://bencho.dev/blocks/folder",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A folder front tilts as its contents fan upward; individual hovered photos rise further.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Colour · Blue · Pink · Lilac · Spread 8°"
+    },
+    {
+      "name": "Foggy word",
+      "slug": "foggy-word",
+      "url": "https://bencho.dev/blocks/foggy-word",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "The pointer clears a local path through condensation, which returns over time.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Behind · Word · Image · Wipe 18px · Fog back 20s · Drips 40 · Fog 60 · Corner 20px"
+    },
+    {
+      "name": "Coin",
+      "slug": "coin",
+      "url": "https://bencho.dev/blocks/coin",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A raised metal token tilts toward the cursor and retains angular momentum after a spin.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape · Hex · Round · Metal · Silver · Graphite · Float 50"
+    },
+    {
+      "name": "Text fade",
+      "slug": "text-fade",
+      "url": "https://bencho.dev/blocks/text-fade",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Opacity introduces a paragraph by whole block, line, word or character.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reveal · Whole · Lines · Words · Letters · Speed 1.0x"
+    },
+    {
+      "name": "Text rise",
+      "slug": "text-rise",
+      "url": "https://bencho.dev/blocks/text-rise",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Vertical motion introduces text with a configurable unit of staggering.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reveal · Whole · Lines · Words · Letters · Speed 1.0x"
+    },
+    {
+      "name": "Text blur",
+      "slug": "text-blur",
+      "url": "https://bencho.dev/blocks/text-blur",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Blur and small upward movement resolve text into readable form in sequence.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reveal · Whole · Lines · Words · Letters · Speed 1.0x"
+    },
+    {
+      "name": "Tab bar",
+      "slug": "tab-bar",
+      "url": "https://bencho.dev/blocks/tab-bar",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The chosen icon gains a label while a shared tile moves and resizes beneath it.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bounce 50 · Corner 20px"
+    },
+    {
+      "name": "Range",
+      "slug": "range",
+      "url": "https://bencho.dev/blocks/range",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Two draggable price labels select a histogram interval; nearby labels merge into a combined tag.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Step€1€5€10 · Style · Bars · Dots · Lines · Graph · Bounce 50 · Density 40"
+    },
+    {
+      "name": "Tape",
+      "slug": "tape",
+      "url": "https://bencho.dev/blocks/tape",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Playback speed controls moving track texture, with optional quarter-step snapping and ticks.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Snap · Tape"
+    },
+    {
+      "name": "Pay button",
+      "slug": "pay-button",
+      "url": "https://bencho.dev/blocks/pay-button",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A payment summary collapses into its action, then expands into a folded receipt.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Loading · Line · Flow · Arc · Layout · Card · Pill"
+    },
+    {
+      "name": "Collapsing sidebar",
+      "slug": "collapsing-sidebar",
+      "url": "https://bencho.dev/blocks/collapsing-sidebar",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Labels depart before width contracts; the icon column stays aligned as the highlight becomes square.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bounce 70 · Speed 1.0x · Corner 20px"
+    },
+    {
+      "name": "Copy field",
+      "slug": "copy-field",
+      "url": "https://bencho.dev/blocks/copy-field",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Copy feedback merges page icons into a drawn check and sends a sheen through the copied text.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "View · Code · Link · Corner 20px"
+    },
+    {
+      "name": "Dropdown",
+      "slug": "fold-dropdown",
+      "url": "https://bencho.dev/blocks/fold-dropdown",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The current choice anchors an expanding list; selection moves the new value into that anchor.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Icons · Bounce 30 · Corner 20px"
+    },
+    {
+      "name": "Confetti",
+      "slug": "confetti",
+      "url": "https://bencho.dev/blocks/confetti",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A pressed button launches particles that fan outward, flip and fall under gravity.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Palette · Colour · Mono · Amount 90 · Spread 90°"
+    },
+    {
+      "name": "Picker wheel",
+      "slug": "picker-wheel",
+      "url": "https://bencho.dev/blocks/picker-wheel",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "An endlessly looping option drum uses scale, opacity, curvature and snapping to clarify selection.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "List · Countries · Apps · Curve 50 · Corner 18px"
+    },
+    {
+      "name": "Split view",
+      "slug": "split-view",
+      "url": "https://bencho.dev/blocks/split-view",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Both panes reflow their internal content continuously as the divider changes their available width.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 20px"
+    },
+    {
+      "name": "Album shelf",
+      "slug": "album-shelf",
+      "url": "https://bencho.dev/blocks/album-shelf",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Edge-facing album covers rotate toward the cursor to reveal the item being explored.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Tilt 62°Corner 20px"
+    },
+    {
+      "name": "Piano",
+      "slug": "piano",
+      "url": "https://bencho.dev/blocks/piano",
+      "catalog_gesture": "Press",
+      "behavior_notes": "An octave supports individual presses, gliding across keys and a mapped keyboard interaction.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Octave · Low · Mid · High · Corner 20px"
+    },
+    {
+      "name": "Hub diagram",
+      "slug": "hub-diagram",
+      "url": "https://bencho.dev/blocks/hub-diagram",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A service hub links to peripheral tools through animated packets and pointer-highlighted spokes.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Nodes 6 · Spread 140px · Corner 20px"
+    },
+    {
+      "name": "Billing card",
+      "slug": "billing-card",
+      "url": "https://bencho.dev/blocks/billing-card",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A stacked spend bar opens into its legend; category hover links the legend to the matching segment.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Spent 18.08 · Corner 20px"
+    },
+    {
+      "name": "Wave loader",
+      "slug": "wave-loader",
+      "url": "https://bencho.dev/blocks/wave-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A few short vertical bars rise and fall in an offset wave.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape · Round · Square · Speed 1.0x"
+    },
+    {
+      "name": "Bounce loader",
+      "slug": "bounce-loader",
+      "url": "https://bencho.dev/blocks/bounce-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "Three staggered dots hop with compression at landing.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape · Round · Square · Speed 1.0x"
+    },
+    {
+      "name": "Trace loader",
+      "slug": "trace-loader",
+      "url": "https://bencho.dev/blocks/trace-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A moving dash follows a faint loop while varying its length.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape · Square · Circle · Speed 1.0x"
+    },
+    {
+      "name": "Morph loader",
+      "slug": "morph-loader",
+      "url": "https://bencho.dev/blocks/morph-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A rotating shape repeatedly interpolates between rounded square and circle.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 1.0x"
+    },
+    {
+      "name": "Pixel loader",
+      "slug": "pixel-loader",
+      "url": "https://bencho.dev/blocks/pixel-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "Small pixels form an outward circular ripple or a diagonal grid wave.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape · Circle · Square · Speed 1.0x"
+    },
+    {
+      "name": "Blocks loader",
+      "slug": "blocks-loader",
+      "url": "https://bencho.dev/blocks/blocks-loader",
+      "catalog_gesture": "Loading",
+      "behavior_notes": "A small matrix recedes and returns cell by cell along a diagonal.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Grid 3×32×2 · Shape · Squares · Dots · Speed 1.0x"
+    },
+    {
+      "name": "Flight island",
+      "slug": "flight-island",
+      "url": "https://bencho.dev/blocks/flight-island",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A compact flight capsule expands into route, aircraft position and arrival details.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Island · Black · White · Bounce 40"
+    },
+    {
+      "name": "Music island",
+      "slug": "music-island",
+      "url": "https://bencho.dev/blocks/music-island",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A small playback capsule becomes a full music control surface and collapses back.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Island · Black · White · Bounce 40"
+    },
+    {
+      "name": "Call island",
+      "slug": "call-island",
+      "url": "https://bencho.dev/blocks/call-island",
+      "catalog_gesture": "Press",
+      "behavior_notes": "An active-call capsule expands to identity, elapsed call information and call controls.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Island · Black · White · Bounce 40"
+    },
+    {
+      "name": "Pill accordion",
+      "slug": "pill-accordion",
+      "url": "https://bencho.dev/blocks/pill-accordion",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A selected pill becomes a detailed card while the previously expanded item closes.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 26px"
+    },
+    {
+      "name": "Resize frame",
+      "slug": "resize-frame",
+      "url": "https://bencho.dev/blocks/resize-frame",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Handles resize a frame with live edge measurements and optional aspect-ratio snapping.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Ratio snap · On · Off · Corner 0px"
+    },
+    {
+      "name": "Progressive blur",
+      "slug": "progressive-blur",
+      "url": "https://bencho.dev/blocks/progressive-blur",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Hover reveals a caption within a blur gradient that intensifies toward the picture's lower edge.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Strength 50 · Height 50%Corner 20px"
+    },
+    {
+      "name": "Feedback bar",
+      "slug": "feedback-bar",
+      "url": "https://bencho.dev/blocks/feedback-bar",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Positive feedback acknowledges completion; negative feedback expands into a reason-gathering state.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 20px"
+    },
+    {
+      "name": "Price flow",
+      "slug": "price-flow",
+      "url": "https://bencho.dev/blocks/price-flow",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Changed price digits appear with a slight rise, blur and stagger alongside semantic change color.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 23px"
+    },
+    {
+      "name": "Card fan",
+      "slug": "card-fan",
+      "url": "https://bencho.dev/blocks/card-fan",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A selected photo rises from a spread hand and becomes slightly larger.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Spread 50 · Corner 20px"
+    },
+    {
+      "name": "Smudge",
+      "slug": "smudge",
+      "url": "https://bencho.dev/blocks/smudge",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Pointer movement locally distorts a picture as wet paint, water ripples or mosaic tiles.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Effect · Smudge · Ripple · Mosaic · Strength 50 · Wobble 50 · Corner 20px"
+    },
+    {
+      "name": "Swipe deck",
+      "slug": "swipe-deck",
+      "url": "https://bencho.dev/blocks/swipe-deck",
+      "catalog_gesture": "Swipe",
+      "behavior_notes": "Throwing the top card cycles it behind the remaining deck.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fan 50 · Corner 20px"
+    },
+    {
+      "name": "Radial pop-out",
+      "slug": "radial-pop-out",
+      "url": "https://bencho.dev/blocks/radial-pop-out",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Hover reveals secondary pictures arranged around the central picture.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Spread 100%Speed 50 · Corner 20px"
+    },
+    {
+      "name": "Form error",
+      "slug": "form-error",
+      "url": "https://bencho.dev/blocks/form-error",
+      "catalog_gesture": "Type",
+      "behavior_notes": "Invalid input produces a red edge, one restrained shake and an inline explanation below.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 20px"
+    },
+    {
+      "name": "Heart rate",
+      "slug": "heart-rate",
+      "url": "https://bencho.dev/blocks/heart-rate",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Time scrubbing updates the displayed rate and synchronizes the heart animation to that value.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 20px"
+    },
+    {
+      "name": "Light",
+      "slug": "light",
+      "url": "https://bencho.dev/blocks/light",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A local pointer spotlight reveals text printed on an otherwise dark surface.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Reach 70 · Corner 20px"
+    },
+    {
+      "name": "Segment timer",
+      "slug": "segment-timer",
+      "url": "https://bencho.dev/blocks/segment-timer",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Dragging around minute ticks sets a focus timer; the selected arc represents duration.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Start 25min · Bounce 50 · Corner 20px"
+    },
+    {
+      "name": "Password strength",
+      "slug": "password-strength",
+      "url": "https://bencho.dev/blocks/password-strength",
+      "catalog_gesture": "Type",
+      "behavior_notes": "Typing updates a strength graphic and individual password requirements.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Length 8 · Corner 20px"
+    },
+    {
+      "name": "Thinking",
+      "slug": "thinking",
+      "url": "https://bencho.dev/blocks/thinking",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Reasoning steps arrive over time and condense into a summary that can reopen them.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Pace 1100ms · Corner 20px"
+    },
+    {
+      "name": "Activity stack",
+      "slug": "activity-stack",
+      "url": "https://bencho.dev/blocks/activity-stack",
+      "catalog_gesture": "Swipe",
+      "behavior_notes": "Dismissing the front notification promotes the next depth layer into its position.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 50; Peek 10px; Corner 20px"
+    },
+    {
+      "name": "Ticket",
+      "slug": "ticket",
+      "url": "https://bencho.dev/blocks/ticket",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A perforated ticket stub separates progressively through a chain of elastic connections.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Jelly 50; Joints 7; Corner 20px"
+    },
+    {
+      "name": "Share pill",
+      "slug": "share-pill",
+      "url": "https://bencho.dev/blocks/share-pill",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Collaborator avatars, copy-link action and an expanding invite form share one compact surface.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Spread 6px; Corner 20px"
+    },
+    {
+      "name": "Voice chat",
+      "slug": "voice-chat",
+      "url": "https://bencho.dev/blocks/voice-chat",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A participant pill grows into a room view that emphasizes the active speaker.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Speed 50; Corner 20px"
+    },
+    {
+      "name": "World clock",
+      "slug": "world-clock",
+      "url": "https://bencho.dev/blocks/world-clock",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A shared time ruler shifts several city clocks together; selecting a city changes the home reference.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Clock: 24h/12h (default 24h); Corner 20px"
+    },
+    {
+      "name": "Skeleton morph",
+      "slug": "skeleton-morph",
+      "url": "https://bencho.dev/blocks/skeleton-morph",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Placeholder bars interpolate into the corresponding content in reading order.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Stagger 160ms; Wait 900ms; Corner 20px"
+    },
+    {
+      "name": "Date reel",
+      "slug": "date-reel",
+      "url": "https://bencho.dev/blocks/date-reel",
+      "catalog_gesture": "Swipe",
+      "behavior_notes": "Separate date and time drums coast after a flick and snap into a fixed reading band.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Clock: 12h/24h (default 12h); Glide 50; Curve 40; Corner 20px"
+    },
+    {
+      "name": "Folding bill",
+      "slug": "folding-bill",
+      "url": "https://bencho.dev/blocks/folding-bill",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A draggable paper mesh bends and folds, with stiffness and recovery independently adjustable.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Print \"Plain\"; Stiffness 40; Settle 0"
+    },
+    {
+      "name": "Magnetic dots",
+      "slug": "magnetic-dots",
+      "url": "https://bencho.dev/blocks/magnetic-dots",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Nearby dots or strokes lean toward the cursor with distance falloff and spring restoration.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Shape: Lines/Dots (default Lines); Pull 50; Radius 50; Spring 50; Spacing 10px"
+    },
+    {
+      "name": "Dot globe",
+      "slug": "dot-globe",
+      "url": "https://bencho.dev/blocks/dot-globe",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A dotted sphere carries animated routes toward a selectable city destination.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Dots: Square/Round (default Square); Ocean dots; Arcs 50; Speed 25; Arc height 60; Trail 45; Density 40; Tilt 22°"
+    },
+    {
+      "name": "Sweep button",
+      "slug": "sweep-button",
+      "url": "https://bencho.dev/blocks/sweep-button",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A soft colored highlight travels along the button rim without changing its label.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Rim line; Speed 4.5s; Glow 30; Corner 24px"
+    },
+    {
+      "name": "Asset swap",
+      "slug": "asset-swap",
+      "url": "https://bencho.dev/blocks/asset-swap",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A central action reverses asset roles; each asset chip opens an anchored picker.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Assets \"Crypto\"; Bounce 30; Corner 20"
+    },
+    {
+      "name": "ASCII wake",
+      "slug": "ascii-wake",
+      "url": "https://bencho.dev/blocks/ascii-wake",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Pointer movement locally changes dot density into characters; interaction emits an expanding disturbance.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Glyphs \"Classic\"; Reach 60; Trail 1.2; Pull 40; Size 10"
+    },
+    {
+      "name": "Heat map",
+      "slug": "heat-word",
+      "url": "https://bencho.dev/blocks/heat-word",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A dot or text shape develops pointer-local color and heat, with adjustable spread and softness.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Shape \"Dots\"; Colors \"Neon\"; Heat 60; Area 50; Softness 40"
+    },
+    {
+      "name": "Image compare",
+      "slug": "image-compare",
+      "url": "https://bencho.dev/blocks/image-compare",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A draggable image boundary supports inertia while keeping labels attached to their respective sides.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Labels true; Corner 20"
+    },
+    {
+      "name": "Like",
+      "slug": "like",
+      "url": "https://bencho.dev/blocks/like",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Selection coordinates heart deformation, local particles and a rolling numeric count.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Color \"Red\"; Effect \"Bloom\"; Burst 50; Corner 22"
+    },
+    {
+      "name": "Signature pad",
+      "slug": "signature",
+      "url": "https://bencho.dev/blocks/signature",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Stroke width follows drawing speed; clearing unwinds the existing strokes rather than removing them instantly.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Pen 40; Ink \"Black\"; Smoothing 50; Rewind 50; Corner 20"
+    },
+    {
+      "name": "Voice note",
+      "slug": "voice-note",
+      "url": "https://bencho.dev/blocks/voice-note",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Holding opens a waveform state, moving sideways cancels, and release produces playback controls.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Bars 28; Sensitivity 60; Bounce 40; Corner 28"
+    },
+    {
+      "name": "Eye tracker",
+      "slug": "eye-tracker",
+      "url": "https://bencho.dev/blocks/eye-tracker",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A soft character turns its body and eyes toward the pointer with tunable follow and overshoot.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Follow 60; Bounce 30; Shape \"Cube\"; Eyes \"Slant\"; Size 100"
+    },
+    {
+      "name": "Dynamic island",
+      "slug": "dynamic-island",
+      "url": "https://bencho.dev/blocks/dynamic-island",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A timer capsule opens into its activity while preserving the identity of the original capsule.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Island \"Black\"; Bounce 40"
+    },
+    {
+      "name": "Time scrubber",
+      "slug": "time-scrubber",
+      "url": "https://bencho.dev/blocks/time-scrubber",
+      "catalog_gesture": "Slide",
+      "behavior_notes": "An inertial ruler controls time and resolves to a selected minute interval after release.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Step \"15\"; Momentum 50; Format \"12h\"; Corner 20"
+    },
+    {
+      "name": "Upload dropzone",
+      "slug": "upload-dropzone",
+      "url": "https://bencho.dev/blocks/upload-dropzone",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Sample file cards move into a drop target; accepted and oversized files receive distinct feedback.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Speed 50; Bounce 40; Corner 20"
+    },
+    {
+      "name": "Rolling counter",
+      "slug": "rolling-counter",
+      "url": "https://bencho.dev/blocks/rolling-counter",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Digits rotate by column during taps, accelerated holds and inertial vertical scrubbing.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Bounce 45; Stagger 45; Blur 50; Corner 16"
+    },
+    {
+      "name": "Particles",
+      "slug": "particles",
+      "url": "https://bencho.dev/blocks/particles",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A field deforms around the pointer, returns to a target shape and supports a press shockwave.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Shape \"Circle\"; Reach 80; Force 60; Grain \"Fine\""
+    },
+    {
+      "name": "Label input",
+      "slug": "label-input",
+      "url": "https://bencho.dev/blocks/label-input",
+      "catalog_gesture": "Type",
+      "behavior_notes": "Focus lifts the label into an opening in the border; filled text keeps the label elevated.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Field \"Email\"; Corner 20"
+    },
+    {
+      "name": "One-time code",
+      "slug": "one-time-code",
+      "url": "https://bencho.dev/blocks/one-time-code",
+      "catalog_gesture": "Type",
+      "behavior_notes": "One actual input drives several visual cells, coordinating focus, paste, verification and reset states.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Answer \"Accept\"; Length \"4\"; Corner 12"
+    },
+    {
+      "name": "Generate",
+      "slug": "generate",
+      "url": "https://bencho.dev/blocks/generate",
+      "catalog_gesture": "Press",
+      "behavior_notes": "An image develops from broad shapes to detail under a changing glass-like surface.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Pace 5; Ripple 50; Corner 20"
+    },
+    {
+      "name": "Step player",
+      "slug": "step-player",
+      "url": "https://bencho.dev/blocks/step-player",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The active step elongates into a filling bar, then hands progress to the following dot.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Wake 100; Pace 3; Steps 5"
+    },
+    {
+      "name": "Todo tower",
+      "slug": "todo-tower",
+      "url": "https://bencho.dev/blocks/todo-tower",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Task rows behave as stacked bodies, so removing one allows the rows above to settle physically.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Gravity 50; Todos 6; Slip 45"
+    },
+    {
+      "name": "Image accordion",
+      "slug": "image-accordion",
+      "url": "https://bencho.dev/blocks/image-accordion",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "The hovered image gains width while the surrounding images redistribute the remaining space.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Open 50; Reach 35; Bounce 10; Gap 8"
+    },
+    {
+      "name": "Glass bubble",
+      "slug": "glass-bubble",
+      "url": "https://bencho.dev/blocks/glass-bubble",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A dragged lens bends the underlying picture, including optional color fringing around its rim.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Size 180; Bend 60; Fringe 30; Corner 20"
+    },
+    {
+      "name": "Action node",
+      "slug": "action-node",
+      "url": "https://bencho.dev/blocks/action-node",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Secondary automation actions unfold from the card corner with a staggered, sprung arrival.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Bounce 20; Stagger 55; Buttons 4; Corner 20"
+    },
+    {
+      "name": "Magnetic select",
+      "slug": "magnet-select",
+      "url": "https://bencho.dev/blocks/magnet-select",
+      "catalog_gesture": "Select",
+      "behavior_notes": "The selected circular option expands and pushes neighboring options away from its new footprint.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Pull 55; Bounce 55; Give 50; Size \"Large\""
+    },
+    {
+      "name": "Slide to confirm",
+      "slug": "slide-confirm",
+      "url": "https://bencho.dev/blocks/slide-confirm",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A handle follows the drag, returns if abandoned early and completes automatically beyond its commitment point.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Width 280; Corner 28; Speed 50"
+    },
+    {
+      "name": "Assignees",
+      "slug": "picker",
+      "url": "https://bencho.dev/blocks/picker",
+      "catalog_gesture": "Select",
+      "behavior_notes": "Selecting people updates an overlapping avatar summary, with row and packed-grid arrangements.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 20; Stack \"Row\"; Overlap 10"
+    },
+    {
+      "name": "Checklist",
+      "slug": "checklist",
+      "url": "https://bencho.dev/blocks/checklist",
+      "catalog_gesture": "Press",
+      "behavior_notes": "One completion transition coordinates box fill, check drawing and text strike-through.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 20; Box 18; Bounce 50"
+    },
+    {
+      "name": "Carousel",
+      "slug": "carousel",
+      "url": "https://bencho.dev/blocks/carousel",
+      "catalog_gesture": "Swipe",
+      "behavior_notes": "Photo cards occupy a circular depth arrangement with drift, pointer pressure and inertial navigation.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Spread 138; Depth 100; Corner 20; Float 15; Sink 50; Settle 50"
+    },
+    {
+      "name": "Palette",
+      "slug": "palette",
+      "url": "https://bencho.dev/blocks/palette",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A compact swatch group changes coordinated colors together while retaining its geometry.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Colours 4; Corner 14; Morph 50"
+    },
+    {
+      "name": "Aspect ratio",
+      "slug": "aspect",
+      "url": "https://bencho.dev/blocks/aspect",
+      "catalog_gesture": "Select",
+      "behavior_notes": "Aspect-ratio selection morphs width and height while preserving the picture's total displayed area.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Morph 50; Corner 20"
+    },
+    {
+      "name": "Tilt card",
+      "slug": "tilt",
+      "url": "https://bencho.dev/blocks/tilt",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Pointer pressure makes the image recede locally, with tilt and shading describing the depression.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Tilt 10; Shade 60; Corner 20"
+    },
+    {
+      "name": "Now playing",
+      "slug": "sound",
+      "url": "https://bencho.dev/blocks/sound",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A compact track summary grows into a player while preserving album, progress and playback context.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 16; Morph 50"
+    },
+    {
+      "name": "Dragging ball",
+      "slug": "drag-ball",
+      "url": "https://bencho.dev/blocks/drag-ball",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "A draggable body swells on approach, compresses while held and deforms according to motion.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Stretch 36; Give 50; Grip 50; Size 56"
+    },
+    {
+      "name": "Search",
+      "slug": "seek",
+      "url": "https://bencho.dev/blocks/seek",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The search icon grows into its input; expansion preserves a single object and its local focus.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 24; Give 50; Spring 20; Width 240"
+    },
+    {
+      "name": "Pull to refresh",
+      "slug": "pull",
+      "url": "https://bencho.dev/blocks/pull",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Dragging adds elastic resistance, crosses a refresh threshold and settles through working and idle phases.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 20; Spin 50; Dots 6"
+    },
+    {
+      "name": "Escape button",
+      "slug": "escape",
+      "url": "https://bencho.dev/blocks/escape",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "A playful button avoids the pointer a limited number of times before becoming reachable.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 28; Skittishness 55; Patience 4; Radius 120"
+    },
+    {
+      "name": "Slosh slider",
+      "slug": "slosh",
+      "url": "https://bencho.dev/blocks/slosh",
+      "catalog_gesture": "Slide",
+      "behavior_notes": "A slider's moving fill trails and overshoots the handle according to momentum and viscosity.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 20; Viscosity 15; Momentum 55; Tilt 45"
+    },
+    {
+      "name": "Create menu",
+      "slug": "liq-create",
+      "url": "https://bencho.dev/blocks/liq-create",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The create pill expands into its own menu, retaining the original anchor and material continuity.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Corner 20"
+    },
+    {
+      "name": "Reorder list",
+      "slug": "liq-arrange",
+      "url": "https://bencho.dev/blocks/liq-arrange",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Dragged rows change ordering while neighboring rounded surfaces deform and join visually.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Give 50; Lean 18; Corner 22px"
+    },
+    {
+      "name": "Canvas toolbar",
+      "slug": "toolbar",
+      "url": "https://bencho.dev/blocks/toolbar",
+      "catalog_gesture": "Select",
+      "behavior_notes": "A compact floating tool strip retains the previously selected option within its shape tool.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 20px"
+    },
+    {
+      "name": "Radial menu",
+      "slug": "radial",
+      "url": "https://bencho.dev/blocks/radial",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The center trigger opens staggered tool buttons along an adjustable arc.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Stagger 28ms; Tools 5; Radius 68px; Arc 180°"
+    },
+    {
+      "name": "Drag stepper",
+      "slug": "stepper",
+      "url": "https://bencho.dev/blocks/stepper",
+      "catalog_gesture": "Press",
+      "behavior_notes": "Short taps step a value; a sustained drag changes it much faster.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fill / Stroke presentation controls"
+    },
+    {
+      "name": "Inline confirm",
+      "slug": "confirm",
+      "url": "https://bencho.dev/blocks/confirm",
+      "catalog_gesture": "Press",
+      "behavior_notes": "A destructive action expands into a local confirmation state, then offers reversal.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 22px"
+    },
+    {
+      "name": "Notify",
+      "slug": "toasts",
+      "url": "https://bencho.dev/blocks/toasts",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The button retains its selected state while the bell supplies a short swinging acknowledgment.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Corner 22px"
+    },
+    {
+      "name": "Icon bar",
+      "slug": "icon-bar",
+      "url": "https://bencho.dev/blocks/icon-bar",
+      "catalog_gesture": "Select",
+      "behavior_notes": "A shared selection shape stretches across the space between icon destinations.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Axis: Row/Column (default Row); Dilate 100; Bounce 50; Speed 50; Corner 26px"
+    },
+    {
+      "name": "Magnifying dock",
+      "slug": "dock",
+      "url": "https://bencho.dev/blocks/dock",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Nearby icons share magnification with distance falloff, coordinated lift and a moving tooltip.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Magnify 1.32; Lift 8; Reach 2"
+    },
+    {
+      "name": "Progress ticks",
+      "slug": "progress",
+      "url": "https://bencho.dev/blocks/progress",
+      "catalog_gesture": "Hover",
+      "behavior_notes": "Scrubbing emphasizes nearby ticks and continuously updates a percentage readout.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Fill / Stroke presentation controls"
+    },
+    {
+      "name": "Wheel",
+      "slug": "humidity",
+      "url": "https://bencho.dev/blocks/humidity",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Dragging along a circular scale moves the active tick band and numeric value.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Wave 2.6; Density 60; Sweep 300°"
+    },
+    {
+      "name": "Command bar",
+      "slug": "command",
+      "url": "https://bencho.dev/blocks/command",
+      "catalog_gesture": "Type",
+      "behavior_notes": "A compact trigger joins an expanding command input and separates back into its resting form.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Bridge 3px; Corner 28px; Edge 22"
+    },
+    {
+      "name": "Selection list",
+      "slug": "roster",
+      "url": "https://bencho.dev/blocks/roster",
+      "catalog_gesture": "Select",
+      "behavior_notes": "Selecting rows introduces a context action whose presence and size reflect the current selection.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Rows: 2/3 (default 3); Corner 20px"
+    },
+    {
+      "name": "Range dial",
+      "slug": "sleep",
+      "url": "https://bencho.dev/blocks/sleep",
+      "catalog_gesture": "Drag",
+      "behavior_notes": "Two independent handles define an interval around a circular tick scale, with optional snapping.",
+      "coverage": "Pro: still + description",
+      "observed_control_summary": "Snap: 5/15/30 (default 15); Density 48; Reach 56px"
+    },
+    {
+      "name": "Liquid toggle",
+      "slug": "liq-toggle",
+      "url": "https://bencho.dev/blocks/liq-toggle",
+      "catalog_gesture": "Press",
+      "behavior_notes": "The moving thumb stretches along its velocity and thins across it, then settles with slight give.",
+      "coverage": "Free: live + source",
+      "observed_control_summary": "Speed 50; Stretch 36"
+    }
+  ]
+}

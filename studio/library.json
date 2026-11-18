@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "updatedAt": "2026-11-18T10:32:46+00:00",
+  "components": [
+    {
+      "id": "soft-header",
+      "name": "Soft header",
+      "description": "A quiet header with a workspace switcher, notifications, and profile. Soft anchored modals, with every action connected.",
+      "category": "Navigation",
+      "createdAt": "2026-11-18T10:32:46+00:00",
+      "versions": [
+        {
+          "id": "v001",
+          "number": 1,
+          "label": "Original",
+          "createdAt": "2026-11-18T10:32:46+00:00",
+          "preview": "components/soft-header/v001/preview.html",
+          "files": [
+            {
+              "name": "source.html",
+              "path": "components/soft-header/v001/source.html"
+            }
+          ],
+          "prompt": "Build a top header with profile, logo, and notification bell; each opens a modal.",
+          "fingerprint": "c238debb2702cd686bb59969a941f2ffcf04adac3b19d5d3fa239138c28e8221"
+        }
+      ],
+      "updatedAt": "2026-11-18T10:32:46+00:00"
+    }
+  ]
+}

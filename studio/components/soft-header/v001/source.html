@@ -1,0 +1,694 @@
+<div id="forma-header-preview" class="viz-dotted-background">
+  <style>
+    #forma-header-preview {
+      --fh-page: light-dark(#ffffff, #0a0a0a);
+      --fh-surface: light-dark(#ffffff, #171717);
+      --fh-wash: light-dark(#f3f3f1, #232323);
+      --fh-hover: light-dark(#ebebe8, #2d2d2d);
+      --fh-ink: light-dark(#17181a, #f5f5f3);
+      --fh-secondary: light-dark(#6f6e68, #a1a19b);
+      --fh-line: light-dark(rgb(23 24 26 / .08), rgb(255 255 255 / .08));
+      --fh-inverse: light-dark(#ffffff, #17181a);
+      --fh-shadow: light-dark(rgb(23 24 26 / .09), rgb(0 0 0 / .3));
+      --fh-scrim: light-dark(rgb(247 247 246 / .48), rgb(10 10 10 / .5));
+      --fh-green: light-dark(#24724a, #68b98b);
+      --fh-amber: light-dark(#e8b46a, #dcac6c);
+      --fh-amber-ink: #362719;
+      --fh-avatar-a: #b9c3fa;
+      --fh-avatar-b: #6a7ed6;
+      --fh-avatar-c: #cf9cf0;
+      --fh-avatar-ink: #252644;
+      --fh-mint-a: #c2d6ba;
+      --fh-mint-b: #75a48b;
+      --fh-mint-c: #ecdaa7;
+      --fh-mint-ink: #263b31;
+      --fh-peach-a: #edb69c;
+      --fh-peach-b: #cf7883;
+      --fh-peach-c: #f6d292;
+      --fh-peach-ink: #4a292c;
+      --fh-arrive: cubic-bezier(.22, 1, .36, 1);
+      --fh-give: cubic-bezier(.24, 1.34, .38, 1);
+      --fh-bar-radius: 22px;
+      --fh-modal-radius: 26px;
+      color: var(--fh-ink);
+      position: relative;
+      isolation: isolate;
+    }
+    #forma-header-preview .fh-app,
+    #forma-header-preview .fh-app * { box-sizing: border-box; }
+    #forma-header-preview .fh-app {
+      font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.45;
+      color: var(--fh-ink);
+      min-height: 176px;
+      padding: 32px 16px;
+      transition: min-height 420ms var(--fh-arrive);
+    }
+    #forma-header-preview[data-expanded="true"] .fh-app { min-height: 566px; }
+    #forma-header-preview .fh-app :where(button, input) { font: inherit; }
+    #forma-header-preview .fh-app :where(button) {
+      color: inherit;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+    #forma-header-preview .fh-app [hidden] { display: none !important; }
+    #forma-header-preview .fh-app h2,
+    #forma-header-preview .fh-app p { margin: 0; }
+    #forma-header-preview .fh-bar {
+      min-height: 72px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: var(--fh-surface);
+      border-radius: var(--fh-bar-radius);
+      box-shadow: 0 0 0 1px var(--fh-line), 0 4px 14px -8px var(--fh-shadow);
+    }
+    #forma-header-preview[data-compact="true"] .fh-bar { min-height: 64px; padding-block: 6px; }
+    #forma-header-preview .fh-brand {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      padding: 4px 8px 4px 4px;
+      border: 0;
+      background: transparent;
+      border-radius: 14px;
+      text-align: left;
+      transition: background 180ms, transform 220ms var(--fh-arrive);
+    }
+    #forma-header-preview .fh-brand:hover { background: var(--fh-wash); }
+    #forma-header-preview .fh-brand:active { transform: scale(.97); }
+    #forma-header-preview .fh-mark {
+      display: grid;
+      place-items: center;
+      flex: none;
+      height: 36px;
+      width: 36px;
+      border-radius: 12px;
+      background: var(--fh-ink);
+      color: var(--fh-inverse);
+      transition: transform 420ms var(--fh-give), border-radius 420ms var(--fh-arrive);
+    }
+    #forma-header-preview .fh-mark svg { width: 22px; height: 22px; stroke-width: 1.7; }
+    #forma-header-preview .fh-brand:hover .fh-mark { transform: rotate(-8deg); border-radius: 13px; }
+    #forma-header-preview .fh-brand-copy { display: grid; gap: 0; }
+    #forma-header-preview .fh-wordmark { font-size: 17px; font-weight: 500; letter-spacing: -.045em; }
+    #forma-header-preview .fh-workspace { font-size: 11px; color: var(--fh-secondary); }
+    #forma-header-preview .fh-brand-chevron { width: 12px; height: 12px; color: var(--fh-secondary); margin-left: 5px; }
+    #forma-header-preview .fh-actions { display: flex; align-items: center; gap: 8px; }
+    #forma-header-preview .fh-bell {
+      display: grid;
+      place-items: center;
+      position: relative;
+      height: 44px;
+      width: 44px;
+      border: 0;
+      border-radius: 50%;
+      background: transparent;
+      transition: background 180ms, transform 220ms var(--fh-give);
+    }
+    #forma-header-preview .fh-bell:hover { background: var(--fh-wash); }
+    #forma-header-preview .fh-bell:active { transform: scale(.91); }
+    #forma-header-preview .fh-bell > svg { width: 20px; height: 20px; stroke-width: 1.65; transform-origin: 50% 15%; }
+    #forma-header-preview .fh-bell:hover > svg { animation: fh-bell-ring 620ms ease both; }
+    #forma-header-preview .fh-count {
+      position: absolute;
+      right: 5px;
+      top: 3px;
+      display: grid;
+      place-items: center;
+      min-width: 15px;
+      height: 15px;
+      padding: 0 3px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 500;
+      background: var(--fh-amber);
+      color: var(--fh-amber-ink);
+      box-shadow: 0 0 0 2px var(--fh-surface);
+    }
+    #forma-header-preview .fh-divider { width: 1px; height: 22px; margin-inline: 3px; background: var(--fh-line); }
+    #forma-header-preview .fh-profile-trigger {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      height: 48px;
+      padding: 5px 9px 5px 5px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      transition: background 180ms, transform 220ms var(--fh-arrive);
+    }
+    #forma-header-preview .fh-profile-trigger:hover { background: var(--fh-wash); }
+    #forma-header-preview .fh-profile-trigger:active { transform: scale(.96); }
+    #forma-header-preview .fh-avatar {
+      width: 36px;
+      height: 36px;
+      flex: none;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: var(--fh-avatar-ink);
+      background: radial-gradient(ellipse at 22% 18%, var(--fh-avatar-a), transparent 60%), radial-gradient(ellipse at 80% 85%, var(--fh-avatar-c), transparent 65%), var(--fh-avatar-b);
+      box-shadow: inset 0 0 0 1px rgb(255 255 255 / .12);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: -.03em;
+      transition: transform 420ms var(--fh-give), background 300ms;
+    }
+    #forma-header-preview .fh-avatar[data-tone="mint"] {
+      color: var(--fh-mint-ink);
+      background: radial-gradient(ellipse at 22% 18%, var(--fh-mint-a), transparent 60%), radial-gradient(ellipse at 80% 85%, var(--fh-mint-c), transparent 65%), var(--fh-mint-b);
+    }
+    #forma-header-preview .fh-avatar[data-tone="peach"] {
+      color: var(--fh-peach-ink);
+      background: radial-gradient(ellipse at 22% 18%, var(--fh-peach-a), transparent 60%), radial-gradient(ellipse at 80% 85%, var(--fh-peach-c), transparent 65%), var(--fh-peach-b);
+    }
+    #forma-header-preview .fh-profile-trigger:hover .fh-avatar { transform: scale(1.055); }
+    #forma-header-preview .fh-profile-name { font-size: 13px; font-weight: 500; max-width: 110px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+    #forma-header-preview .fh-profile-chevron { width: 13px; height: 13px; color: var(--fh-secondary); transition: transform 300ms var(--fh-arrive); }
+    #forma-header-preview .fh-profile-trigger[aria-expanded="true"] .fh-profile-chevron { transform: rotate(180deg); }
+    #forma-header-preview .fh-modal {
+      position: absolute;
+      inset: auto;
+      margin: 0;
+      padding: 22px;
+      max-width: calc(100% - 32px);
+      max-height: none;
+      width: 356px;
+      overflow: visible;
+      border: 0;
+      border-radius: var(--fh-modal-radius);
+      background: var(--fh-surface);
+      color: var(--fh-ink);
+      box-shadow: 0 0 0 1px var(--fh-line), 0 8px 24px -12px var(--fh-shadow), 0 24px 72px -24px var(--fh-shadow);
+    }
+    #forma-header-preview .fh-modal::backdrop { background: var(--fh-scrim); backdrop-filter: blur(3px); }
+    #forma-header-preview .fh-modal[data-panel="notifications"] { width: 388px; }
+    #forma-header-preview .fh-modal-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+    #forma-header-preview .fh-modal h2 { font-size: 18px; font-weight: 500; line-height: 1.3; letter-spacing: -.035em; }
+    #forma-header-preview .fh-sub { color: var(--fh-secondary); font-size: 12px; margin-top: 4px; }
+    #forma-header-preview .fh-close {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--fh-wash);
+      color: var(--fh-secondary);
+      transition: background 160ms, transform 220ms var(--fh-give);
+    }
+    #forma-header-preview .fh-close svg { width: 16px; height: 16px; stroke-width: 1.7; }
+    #forma-header-preview .fh-close:hover { background: var(--fh-hover); transform: rotate(90deg); }
+    #forma-header-preview .fh-close:active { transform: rotate(90deg) scale(.9); }
+    #forma-header-preview .fh-workspaces { display: grid; gap: 6px; margin-bottom: 20px; }
+    #forma-header-preview .fh-workspace-option {
+      display: flex;
+      position: relative;
+      align-items: center;
+      gap: 12px;
+      padding: 11px 12px;
+      min-height: 64px;
+      border-radius: 16px;
+      transition: background 180ms, box-shadow 180ms;
+    }
+    #forma-header-preview .fh-workspace-option:hover { background: var(--fh-wash); }
+    #forma-header-preview .fh-workspace-option:has(input:checked) { background: var(--fh-wash); box-shadow: inset 0 0 0 1px var(--fh-line); }
+    #forma-header-preview .fh-workspace-option > input { position: absolute; inset: 0; appearance: none; margin: 0; border-radius: inherit; width: 100%; height: 100%; }
+    #forma-header-preview .fh-workspace-symbol { height: 36px; width: 36px; border-radius: 12px; display: grid; place-items: center; background: var(--fh-surface); box-shadow: 0 0 0 1px var(--fh-line); flex: none; }
+    #forma-header-preview .fh-workspace-symbol svg { width: 18px; height: 18px; stroke-width: 1.6; }
+    #forma-header-preview .fh-row-copy { flex: 1; min-width: 0; }
+    #forma-header-preview .fh-row-title { display: block; font-size: 13px; font-weight: 500; letter-spacing: -.015em; }
+    #forma-header-preview .fh-row-detail { display: block; color: var(--fh-secondary); font-size: 11px; margin-top: 3px; }
+    #forma-header-preview .fh-option-check { height: 16px; width: 16px; opacity: 0; transform: scale(.6); transition: opacity 160ms, transform 320ms var(--fh-give); }
+    #forma-header-preview .fh-workspace-option:has(input:checked) .fh-option-check { opacity: 1; transform: scale(1); }
+    #forma-header-preview .fh-primary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      min-height: 42px;
+      width: 100%;
+      padding: 10px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--fh-ink);
+      color: var(--fh-inverse);
+      font-size: 13px;
+      font-weight: 500;
+      transition: transform 220ms var(--fh-arrive), opacity 160ms;
+    }
+    #forma-header-preview .fh-primary > svg { height: 16px; width: 16px; transition: transform 300ms var(--fh-arrive); }
+    #forma-header-preview .fh-primary:hover { transform: scale(.98); }
+    #forma-header-preview .fh-primary:hover > svg { transform: translateX(3px); }
+    #forma-header-preview .fh-primary:active { transform: scale(.955); }
+    #forma-header-preview .fh-profile-hero { display: flex; align-items: center; gap: 12px; margin-bottom: 22px; }
+    #forma-header-preview .fh-avatar-large { width: 52px; height: 52px; font-size: 15px; }
+    #forma-header-preview .fh-online { display: flex; align-items: center; gap: 5px; color: var(--fh-secondary); font-size: 11px; margin-top: 4px; }
+    #forma-header-preview .fh-online::before { content: ""; display: block; width: 5px; height: 5px; background: var(--fh-green); border-radius: 50%; }
+    #forma-header-preview .fh-field { display: grid; gap: 7px; margin-bottom: 15px; }
+    #forma-header-preview .fh-label { font-size: 12px; color: var(--fh-secondary); }
+    #forma-header-preview .fh-input {
+      width: 100%;
+      min-width: 0;
+      padding: 11px 13px;
+      border: 1px solid transparent;
+      border-radius: 13px;
+      background: var(--fh-wash);
+      color: var(--fh-ink);
+      font-size: 13px;
+      transition: background 180ms, border-color 180ms;
+    }
+    #forma-header-preview .fh-input:hover { background: var(--fh-hover); }
+    #forma-header-preview .fh-input:focus { border-color: var(--fh-secondary); background: var(--fh-surface); }
+    #forma-header-preview .fh-color-row { display: flex; align-items: center; justify-content: space-between; margin: 4px 0 22px; }
+    #forma-header-preview .fh-color-options { display: flex; align-items: center; gap: 7px; border: 0; margin: 0; padding: 0; }
+    #forma-header-preview .fh-color-option { position: relative; width: 28px; height: 28px; display: grid; place-items: center; }
+    #forma-header-preview .fh-color-option .fh-avatar { width: 20px; height: 20px; }
+    #forma-header-preview .fh-color-option input { appearance: none; position: absolute; width: 28px; height: 28px; margin: 0; inset: 0; border: 1px solid transparent; border-radius: 50%; transition: border-color 180ms, transform 250ms var(--fh-give); }
+    #forma-header-preview .fh-color-option input:checked { border-color: var(--fh-secondary); }
+    #forma-header-preview .fh-color-option:hover input { transform: scale(1.1); }
+    #forma-header-preview .fh-notification-list { display: grid; gap: 5px; min-height: 222px; }
+    #forma-header-preview .fh-notification {
+      width: 100%;
+      display: flex;
+      gap: 11px;
+      align-items: flex-start;
+      border: 0;
+      text-align: left;
+      background: transparent;
+      padding: 13px 10px;
+      border-radius: 15px;
+      transition: background 180ms, transform 300ms var(--fh-arrive), opacity 200ms;
+    }
+    #forma-header-preview .fh-notification:hover { background: var(--fh-wash); }
+    #forma-header-preview .fh-notification:active { transform: scale(.98); }
+    #forma-header-preview .fh-note-icon { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 11px; background: var(--fh-wash); color: var(--fh-secondary); flex: none; }
+    #forma-header-preview .fh-note-icon svg { height: 16px; width: 16px; stroke-width: 1.6; }
+    #forma-header-preview .fh-note-copy { flex: 1; min-width: 0; }
+    #forma-header-preview .fh-note-top { display: flex; align-items: baseline; justify-content: space-between; gap: 7px; }
+    #forma-header-preview .fh-note-top time { font-size: 10px; color: var(--fh-secondary); flex: none; }
+    #forma-header-preview .fh-note-title { font-size: 12px; font-weight: 500; letter-spacing: -.01em; }
+    #forma-header-preview .fh-note-detail { margin-top: 4px; color: var(--fh-secondary); font-size: 11px; }
+    #forma-header-preview .fh-note-unread { width: 5px; height: 5px; border-radius: 50%; background: var(--fh-amber); flex: none; margin-top: 7px; }
+    #forma-header-preview .fh-notification[data-read="true"] { opacity: .6; }
+    #forma-header-preview .fh-notification[data-read="true"] .fh-note-unread { opacity: 0; }
+    #forma-header-preview .fh-note-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid var(--fh-line); padding-top: 13px; margin-top: 12px; }
+    #forma-header-preview .fh-quiet { display: flex; align-items: center; gap: 8px; min-height: 34px; padding: 0; border: 0; background: transparent; font-size: 11px; }
+    #forma-header-preview .fh-switch-track { display: block; height: 18px; width: 30px; padding: 3px; border-radius: 999px; background: var(--fh-hover); transition: background 260ms; }
+    #forma-header-preview .fh-switch-thumb { display: block; width: 12px; height: 12px; background: var(--fh-secondary); border-radius: 50%; transition: transform 360ms var(--fh-give), background 260ms; }
+    #forma-header-preview .fh-quiet[aria-checked="true"] .fh-switch-track { background: var(--fh-ink); }
+    #forma-header-preview .fh-quiet[aria-checked="true"] .fh-switch-thumb { transform: translateX(12px); background: var(--fh-inverse); }
+    #forma-header-preview .fh-read-all { border: 0; background: var(--fh-wash); border-radius: 999px; padding: 8px 11px; min-height: 34px; font-size: 11px; transition: background 180ms, transform 180ms; }
+    #forma-header-preview .fh-read-all:hover { background: var(--fh-hover); }
+    #forma-header-preview .fh-read-all:active { transform: scale(.96); }
+    #forma-header-preview .fh-read-all:disabled { opacity: .45; }
+    #forma-header-preview .fh-tabs { display: flex; position: relative; width: fit-content; background: var(--fh-wash); padding: 3px; border-radius: 999px; margin-bottom: 12px; }
+    #forma-header-preview .fh-tabs::before { position: absolute; content: ""; top: 3px; left: 3px; height: 28px; width: 68px; border-radius: 999px; background: var(--fh-surface); box-shadow: 0 1px 4px var(--fh-shadow); transition: transform 360ms var(--fh-give); }
+    #forma-header-preview .fh-tabs[data-current="unread"]::before { transform: translateX(68px); }
+    #forma-header-preview .fh-tab { border: 0; border-radius: 999px; background: transparent; position: relative; width: 68px; height: 28px; color: var(--fh-secondary); font-size: 11px; transition: color 180ms; }
+    #forma-header-preview .fh-tab[aria-pressed="true"] { color: var(--fh-ink); }
+    #forma-header-preview .fh-empty { min-height: 222px; display: grid; place-content: center; justify-items: center; gap: 10px; color: var(--fh-secondary); font-size: 12px; }
+    #forma-header-preview .fh-empty > svg { width: 27px; height: 27px; stroke-width: 1.25; color: var(--fh-ink); }
+    #forma-header-preview .fh-feedback { position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%); width: max-content; max-width: calc(100% - 32px); pointer-events: none; }
+    #forma-header-preview .fh-feedback-inner { display: flex; gap: 8px; align-items: center; background: var(--fh-surface); padding: 10px 15px; border-radius: 999px; font-size: 12px; box-shadow: 0 0 0 1px var(--fh-line), 0 5px 20px var(--fh-shadow); }
+    #forma-header-preview .fh-feedback-inner svg { width: 14px; height: 14px; }
+    #forma-header-preview .fh-live { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+    @keyframes fh-bell-ring { 0%, 100% { transform: rotate(0); } 20% { transform: rotate(15deg); } 40% { transform: rotate(-12deg); } 60% { transform: rotate(7deg); } 80% { transform: rotate(-3deg); } }
+    @media (max-width: 420px) {
+      #forma-header-preview .fh-app { padding: 24px 8px; }
+      #forma-header-preview .fh-bar { gap: 4px; padding-inline: 8px; }
+      #forma-header-preview .fh-brand { gap: 8px; }
+      #forma-header-preview .fh-brand-chevron { display: none; }
+      #forma-header-preview .fh-actions { gap: 2px; }
+      #forma-header-preview .fh-profile-name, #forma-header-preview .fh-profile-chevron { display: none; }
+      #forma-header-preview .fh-profile-trigger { padding: 5px; width: 46px; justify-content: center; }
+      #forma-header-preview .fh-divider { margin-inline: 5px; }
+      #forma-header-preview .fh-modal { padding: 19px; max-width: calc(100% - 24px); }
+      #forma-header-preview .fh-note-title { font-size: 12px; }
+      #forma-header-preview .fh-notification { padding-inline: 5px; gap: 9px; }
+    }
+    @media (pointer: coarse) {
+      #forma-header-preview .fh-close { width: 44px; height: 44px; }
+      #forma-header-preview .fh-quiet, #forma-header-preview .fh-read-all { min-height: 44px; }
+      #forma-header-preview .fh-tab { height: 38px; }
+      #forma-header-preview .fh-tabs::before { height: 38px; }
+      #forma-header-preview .fh-input { font-size: 16px; }
+      #forma-header-preview .fh-color-option, #forma-header-preview .fh-color-option input { width: 44px; height: 44px; }
+      #forma-header-preview[data-expanded="true"] .fh-app { min-height: 620px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      #forma-header-preview .fh-app, #forma-header-preview .fh-app * { animation: none !important; transition: none !important; }
+    }
+    #forma-header-preview[data-motion="off"] .fh-app,
+    #forma-header-preview[data-motion="off"] .fh-app * { animation: none !important; transition: none !important; }
+  </style>
+
+  <div class="fh-app" aria-label="Forma header preview">
+    <header class="fh-bar" aria-label="Top header">
+      <button class="fh-brand cursor-interaction" type="button" data-open-panel="workspace" aria-label="Open workspace modal" aria-haspopup="dialog" aria-controls="fh-workspace-dialog" aria-expanded="false" data-tooltip="Switch workspace">
+        <span class="fh-mark"><i data-lucide="aperture" aria-hidden="true"></i></span>
+        <span class="fh-brand-copy"><span class="fh-wordmark">forma</span><span class="fh-workspace" data-workspace-label>Personal</span></span>
+        <i class="fh-brand-chevron" data-lucide="chevrons-up-down" aria-hidden="true"></i>
+      </button>
+      <div class="fh-actions">
+        <button class="fh-bell cursor-interaction" type="button" data-open-panel="notifications" aria-label="Open notifications modal, 3 unread" aria-haspopup="dialog" aria-controls="fh-notifications-dialog" aria-expanded="false" data-tooltip="Notifications">
+          <i data-lucide="bell" aria-hidden="true"></i><span class="fh-count" aria-hidden="true" data-unread-count>3</span>
+        </button>
+        <span class="fh-divider" aria-hidden="true"></span>
+        <button class="fh-profile-trigger cursor-interaction" type="button" data-open-panel="profile" aria-label="Open profile modal" aria-haspopup="dialog" aria-controls="fh-profile-dialog" aria-expanded="false" data-tooltip="Your profile">
+          <span class="fh-avatar" data-profile-avatar data-tone="lilac" aria-hidden="true">A</span>
+          <span class="fh-profile-name" data-profile-name>Amir</span>
+          <i class="fh-profile-chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
+
+    <dialog class="fh-modal" id="fh-workspace-dialog" data-panel="workspace" aria-labelledby="fh-workspace-title">
+      <div class="fh-modal-head">
+        <div><h2 id="fh-workspace-title">Your workspace</h2><p class="fh-sub">A space for whatever comes next.</p></div>
+        <button class="fh-close cursor-interaction" type="button" data-close-panel aria-label="Close workspace modal"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <form data-workspace-form>
+        <div class="fh-workspaces" role="radiogroup" aria-label="Choose a workspace">
+          <label class="fh-workspace-option fh-stagger cursor-interaction">
+            <input class="cursor-interaction" type="radio" name="fh-workspace" value="Personal" aria-label="Personal workspace" checked>
+            <span class="fh-workspace-symbol"><i data-lucide="user-round" aria-hidden="true"></i></span>
+            <span class="fh-row-copy"><span class="fh-row-title">Personal</span><span class="fh-row-detail">Just you and your ideas</span></span>
+            <i class="fh-option-check" data-lucide="check" aria-hidden="true"></i>
+          </label>
+          <label class="fh-workspace-option fh-stagger cursor-interaction">
+            <input class="cursor-interaction" type="radio" name="fh-workspace" value="Design studio" aria-label="Design studio workspace">
+            <span class="fh-workspace-symbol"><i data-lucide="layers-2" aria-hidden="true"></i></span>
+            <span class="fh-row-copy"><span class="fh-row-title">Design studio</span><span class="fh-row-detail">A place to make things together</span></span>
+            <i class="fh-option-check" data-lucide="check" aria-hidden="true"></i>
+          </label>
+          <label class="fh-workspace-option fh-stagger cursor-interaction">
+            <input class="cursor-interaction" type="radio" name="fh-workspace" value="Side projects" aria-label="Side projects workspace">
+            <span class="fh-workspace-symbol"><i data-lucide="shapes" aria-hidden="true"></i></span>
+            <span class="fh-row-copy"><span class="fh-row-title">Side projects</span><span class="fh-row-detail">Room to try something new</span></span>
+            <i class="fh-option-check" data-lucide="check" aria-hidden="true"></i>
+          </label>
+        </div>
+        <button class="fh-primary cursor-interaction fh-stagger" type="button" data-save-workspace>Open workspace<i data-lucide="arrow-right" aria-hidden="true"></i></button>
+      </form>
+    </dialog>
+
+    <dialog class="fh-modal" id="fh-notifications-dialog" data-panel="notifications" aria-labelledby="fh-notifications-title">
+      <div class="fh-modal-head">
+        <div><h2 id="fh-notifications-title">Notifications</h2><p class="fh-sub" data-notifications-subtitle>3 unread updates</p></div>
+        <button class="fh-close cursor-interaction" type="button" data-close-panel aria-label="Close notifications modal"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <div class="fh-tabs" role="group" aria-label="Filter notifications" data-current="all">
+        <button class="fh-tab cursor-interaction" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="fh-tab cursor-interaction" type="button" data-filter="unread" aria-pressed="false">Unread</button>
+      </div>
+      <div class="fh-notification-list" aria-label="Notifications">
+        <button class="fh-notification fh-stagger cursor-interaction" type="button" data-note="comment" data-read="false" aria-label="Mark Mara's comment as read">
+          <span class="fh-note-icon"><i data-lucide="message-circle" aria-hidden="true"></i></span>
+          <span class="fh-note-copy"><span class="fh-note-top"><span class="fh-note-title">Mara left a comment</span><time>2m</time></span><span class="fh-note-detail">“The new header feels so much better.”</span></span>
+          <span class="fh-note-unread" aria-hidden="true"></span>
+        </button>
+        <button class="fh-notification fh-stagger cursor-interaction" type="button" data-note="export" data-read="false" aria-label="Mark export notification as read">
+          <span class="fh-note-icon"><i data-lucide="download" aria-hidden="true"></i></span>
+          <span class="fh-note-copy"><span class="fh-note-top"><span class="fh-note-title">Your export is ready</span><time>18m</time></span><span class="fh-note-detail">Landing page · PNG</span></span>
+          <span class="fh-note-unread" aria-hidden="true"></span>
+        </button>
+        <button class="fh-notification fh-stagger cursor-interaction" type="button" data-note="invite" data-read="false" aria-label="Mark workspace invitation as read">
+          <span class="fh-note-icon"><i data-lucide="users-round" aria-hidden="true"></i></span>
+          <span class="fh-note-copy"><span class="fh-note-top"><span class="fh-note-title">A little more company</span><time>1h</time></span><span class="fh-note-detail">Priya invited you to Design studio.</span></span>
+          <span class="fh-note-unread" aria-hidden="true"></span>
+        </button>
+      </div>
+      <div class="fh-empty" data-notification-empty hidden><i data-lucide="circle-check" aria-hidden="true"></i><span>All caught up</span></div>
+      <div class="fh-note-footer">
+        <button class="fh-quiet cursor-interaction" type="button" role="switch" aria-checked="false" aria-label="Quiet mode" data-quiet><span class="fh-switch-track" aria-hidden="true"><span class="fh-switch-thumb"></span></span>Quiet mode</button>
+        <button class="fh-read-all cursor-interaction" type="button" data-read-all>Mark all read</button>
+      </div>
+      <span class="fh-live" role="status" aria-live="polite" data-note-announcement></span>
+    </dialog>
+
+    <dialog class="fh-modal" id="fh-profile-dialog" data-panel="profile" aria-labelledby="fh-profile-title">
+      <div class="fh-modal-head">
+        <div><h2 id="fh-profile-title">Your profile</h2><p class="fh-sub">Make yourself at home.</p></div>
+        <button class="fh-close cursor-interaction" type="button" data-close-panel aria-label="Close profile modal"><i data-lucide="x" aria-hidden="true"></i></button>
+      </div>
+      <form data-profile-form>
+        <div class="fh-profile-hero fh-stagger">
+          <span class="fh-avatar fh-avatar-large" data-edit-avatar data-tone="lilac" aria-hidden="true">A</span>
+          <div><span class="fh-row-title" data-edit-name>Amir</span><span class="fh-online">Available</span></div>
+        </div>
+        <label class="fh-field fh-stagger"><span class="fh-label">Display name</span><input class="fh-input" type="text" name="displayName" value="Amir" maxlength="28" autocomplete="off" required></label>
+        <label class="fh-field fh-stagger"><span class="fh-label">What you do</span><input class="fh-input" type="text" name="profileRole" value="Designer & builder" maxlength="50" autocomplete="off"></label>
+        <div class="fh-color-row fh-stagger">
+          <span class="fh-label" id="fh-avatar-color-label">Avatar color</span>
+          <fieldset class="fh-color-options" aria-labelledby="fh-avatar-color-label">
+            <label class="fh-color-option cursor-interaction"><span class="fh-avatar" data-tone="lilac" aria-hidden="true"></span><input class="cursor-interaction" type="radio" name="avatarTone" value="lilac" aria-label="Lilac avatar" checked></label>
+            <label class="fh-color-option cursor-interaction"><span class="fh-avatar" data-tone="mint" aria-hidden="true"></span><input class="cursor-interaction" type="radio" name="avatarTone" value="mint" aria-label="Mint avatar"></label>
+            <label class="fh-color-option cursor-interaction"><span class="fh-avatar" data-tone="peach" aria-hidden="true"></span><input class="cursor-interaction" type="radio" name="avatarTone" value="peach" aria-label="Peach avatar"></label>
+          </fieldset>
+        </div>
+        <button class="fh-primary cursor-interaction fh-stagger" type="button" data-save-profile>Save changes<i data-lucide="check" aria-hidden="true"></i></button>
+      </form>
+    </dialog>
+
+    <div class="fh-feedback" data-feedback hidden><div class="fh-feedback-inner"><i data-lucide="check" aria-hidden="true"></i><span data-feedback-text></span></div></div>
+    <span class="fh-live" role="status" aria-live="polite" data-announcement></span>
+  </div>
+  <script>
+    (() => {
+      const root = document.getElementById('forma-header-preview');
+      const bar = root.querySelector('.fh-bar');
+      const dialogs = Object.fromEntries(Array.from(root.querySelectorAll('dialog[data-panel]')).map(el => [el.dataset.panel, el]));
+      const triggers = Array.from(root.querySelectorAll('[data-open-panel]'));
+      const noteIds = ['comment', 'export', 'invite'];
+      const workspaceNames = ['Personal', 'Design studio', 'Side projects'];
+      const tones = ['lilac', 'mint', 'peach'];
+      const state = { workspace: 'Personal', name: 'Amir', role: 'Designer & builder', tone: 'lilac', read: [], quiet: false, filter: 'all' };
+      const design = { corner: 22, compact: false, motion: true };
+      const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let current = null;
+      let lastTrigger = null;
+      let closing = false;
+      let toastTimer;
+      const profileForm = root.querySelector('[data-profile-form]');
+      const workspaceForm = root.querySelector('[data-workspace-form]');
+      const announcement = root.querySelector('[data-announcement]');
+      const reduced = () => media.matches || !design.motion;
+      const initials = value => value.trim().split(/\s+/).filter(Boolean).slice(0, 2).map(part => Array.from(part)[0]).join('').toUpperCase() || 'A';
+
+      function applySaved(snapshot) {
+        const saved = snapshot && snapshot.privateContent;
+        if (!saved || typeof saved !== 'object') return;
+        if (workspaceNames.includes(saved.workspace)) state.workspace = saved.workspace;
+        if (typeof saved.name === 'string' && saved.name.trim()) state.name = saved.name.slice(0, 28);
+        if (typeof saved.role === 'string') state.role = saved.role.slice(0, 50);
+        if (tones.includes(saved.tone)) state.tone = saved.tone;
+        if (Array.isArray(saved.read)) state.read = saved.read.filter(id => noteIds.includes(id));
+        if (typeof saved.quiet === 'boolean') state.quiet = saved.quiet;
+        if (saved.filter === 'all' || saved.filter === 'unread') state.filter = saved.filter;
+      }
+
+      function persist() {
+        if (!window.openai || !window.openai.setWidgetState) return;
+        window.openai.setWidgetState({
+          modelContent: { workspace: state.workspace, profileName: state.name, unreadNotifications: noteIds.length - state.read.length, quietMode: state.quiet },
+          privateContent: { ...state }
+        }).catch(() => {});
+      }
+
+      function render() {
+        root.querySelector('[data-workspace-label]').textContent = state.workspace;
+        root.querySelector('[data-profile-name]').textContent = state.name;
+        const avatar = root.querySelector('[data-profile-avatar]');
+        avatar.textContent = initials(state.name);
+        avatar.dataset.tone = state.tone;
+        const count = noteIds.length - state.read.length;
+        const countEl = root.querySelector('[data-unread-count]');
+        countEl.textContent = String(count);
+        countEl.hidden = count === 0;
+        const bell = root.querySelector('.fh-bell');
+        bell.setAttribute('aria-label', `Open notifications modal, ${count} unread`);
+        bell.dataset.tooltip = state.quiet ? 'Notifications · quiet mode' : 'Notifications';
+        root.querySelector('[data-notifications-subtitle]').textContent = count ? `${count} unread update${count === 1 ? '' : 's'}` : 'You’re all caught up.';
+        const rows = Array.from(root.querySelectorAll('[data-note]'));
+        rows.forEach(row => {
+          const read = state.read.includes(row.dataset.note);
+          row.dataset.read = String(read);
+          row.hidden = state.filter === 'unread' && read;
+          const title = row.querySelector('.fh-note-title').textContent;
+          row.setAttribute('aria-label', read ? `${title}, read. Mark as unread` : `${title}, unread. Mark as read`);
+        });
+        const empty = rows.every(row => row.hidden);
+        root.querySelector('[data-notification-empty]').hidden = !empty;
+        root.querySelector('.fh-notification-list').hidden = empty;
+        root.querySelector('[data-read-all]').disabled = count === 0;
+        root.querySelector('[data-quiet]').setAttribute('aria-checked', String(state.quiet));
+        root.querySelector('.fh-tabs').dataset.current = state.filter;
+        root.querySelectorAll('[data-filter]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === state.filter)));
+      }
+
+      function placeDialog() {
+        if (!current || !lastTrigger) return;
+        const dialog = dialogs[current];
+        const anchor = lastTrigger.getBoundingClientRect();
+        const header = bar.getBoundingClientRect();
+        const margin = window.innerWidth < 420 ? 12 : 16;
+        const width = Math.min(current === 'notifications' ? 388 : 356, window.innerWidth - margin * 2);
+        const preferred = current === 'workspace' ? anchor.left : anchor.right - width;
+        const left = Math.max(margin, Math.min(preferred, window.innerWidth - width - margin));
+        dialog.style.left = `${left + window.scrollX}px`;
+        dialog.style.top = `${header.bottom + 12 + window.scrollY}px`;
+        dialog.style.transformOrigin = `${Math.max(20, Math.min(width - 20, anchor.left + anchor.width / 2 - left))}px 0px`;
+      }
+
+      function toast(message) {
+        clearTimeout(toastTimer);
+        const box = root.querySelector('[data-feedback]');
+        box.querySelector('[data-feedback-text]').textContent = message;
+        box.hidden = false;
+        announcement.textContent = message;
+        if (!reduced()) box.animate([{ opacity: 0, translate: '0 6px', scale: '.97' }, { opacity: 1, translate: '0 0', scale: '1' }], { duration: 340, easing: 'cubic-bezier(.22,1,.36,1)' });
+        toastTimer = setTimeout(() => { box.hidden = true; }, 2400);
+      }
+
+      function openPanel(name, trigger) {
+        if (!dialogs[name] || closing) return;
+        if (current) dialogs[current].close();
+        root.querySelector('[data-feedback]').hidden = true;
+        lastTrigger = trigger;
+        current = name;
+        root.dataset.expanded = 'true';
+        triggers.forEach(button => button.setAttribute('aria-expanded', String(button === trigger)));
+        if (name === 'profile') {
+          profileForm.elements.displayName.value = state.name;
+          profileForm.elements.profileRole.value = state.role;
+          profileForm.elements.avatarTone.value = state.tone;
+          renderProfileDraft();
+        }
+        if (name === 'workspace') workspaceForm.elements['fh-workspace'].value = state.workspace;
+        const dialog = dialogs[name];
+        placeDialog();
+        dialog.showModal();
+        placeDialog();
+        if (!reduced()) {
+          dialog.animate([
+            { opacity: 0, transform: 'translateY(-12px) scale(.88)', filter: 'blur(3px)' },
+            { opacity: 1, transform: 'translateY(0) scale(1)', filter: 'blur(0)' }
+          ], { duration: 440, easing: 'cubic-bezier(.24,1.12,.38,1)' });
+          dialog.querySelectorAll('.fh-stagger').forEach((element, index) => element.animate([
+            { opacity: 0, transform: 'translateY(7px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], { duration: 320, delay: 50 + index * 27, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'backwards' }));
+        }
+      }
+
+      async function closePanel(message) {
+        if (!current || closing) return;
+        closing = true;
+        const dialog = dialogs[current];
+        if (!reduced()) {
+          try { await dialog.animate([{ opacity: 1, transform: 'translateY(0) scale(1)' }, { opacity: 0, transform: 'translateY(-7px) scale(.965)' }], { duration: 155, easing: 'ease-in', fill: 'forwards' }).finished; } catch (_) {}
+        }
+        dialog.close();
+        dialog.getAnimations().forEach(animation => animation.cancel());
+        current = null;
+        closing = false;
+        root.dataset.expanded = 'false';
+        triggers.forEach(button => button.setAttribute('aria-expanded', 'false'));
+        if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+        if (message) toast(message);
+      }
+
+      function renderProfileDraft() {
+        const name = profileForm.elements.displayName.value || state.name;
+        root.querySelector('[data-edit-name]').textContent = name;
+        const avatar = root.querySelector('[data-edit-avatar]');
+        avatar.textContent = initials(name);
+        avatar.dataset.tone = profileForm.elements.avatarTone.value || state.tone;
+      }
+
+      triggers.forEach(button => button.addEventListener('click', () => openPanel(button.dataset.openPanel, button)));
+      root.querySelectorAll('[data-close-panel]').forEach(button => button.addEventListener('click', () => closePanel()));
+      Object.values(dialogs).forEach(dialog => {
+        dialog.addEventListener('cancel', event => { event.preventDefault(); closePanel(); });
+        dialog.addEventListener('click', event => {
+          if (event.target !== dialog) return;
+          const rect = dialog.getBoundingClientRect();
+          if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) closePanel();
+        });
+      });
+      function saveWorkspace() {
+        const chosen = workspaceForm.elements['fh-workspace'].value;
+        state.workspace = workspaceNames.includes(chosen) ? chosen : 'Personal';
+        render(); persist(); closePanel(`Switched to ${state.workspace}`);
+      }
+      workspaceForm.addEventListener('submit', event => { event.preventDefault(); saveWorkspace(); });
+      root.querySelector('[data-save-workspace]').addEventListener('click', saveWorkspace);
+      workspaceForm.addEventListener('keydown', event => {
+        if (event.key === 'Enter') { event.preventDefault(); saveWorkspace(); }
+      });
+      profileForm.addEventListener('input', renderProfileDraft);
+      profileForm.addEventListener('change', renderProfileDraft);
+      function saveProfile() {
+        if (!profileForm.reportValidity()) return;
+        const name = profileForm.elements.displayName.value.trim();
+        if (!name) { profileForm.elements.displayName.focus(); return; }
+        state.name = name;
+        state.role = profileForm.elements.profileRole.value.trim();
+        state.tone = profileForm.elements.avatarTone.value;
+        render(); persist(); closePanel('Profile updated');
+      }
+      profileForm.addEventListener('submit', event => { event.preventDefault(); saveProfile(); });
+      root.querySelector('[data-save-profile]').addEventListener('click', saveProfile);
+      profileForm.addEventListener('keydown', event => {
+        if (event.key === 'Enter') { event.preventDefault(); saveProfile(); }
+      });
+      root.querySelectorAll('[data-note]').forEach(button => button.addEventListener('click', () => {
+        const id = button.dataset.note;
+        state.read = state.read.includes(id) ? state.read.filter(value => value !== id) : [...state.read, id];
+        render(); persist();
+        root.querySelector('[data-note-announcement]').textContent = `${noteIds.length - state.read.length} unread notifications`;
+        if (button.hidden) {
+          const next = root.querySelector('[data-note]:not([hidden])') || root.querySelector('[data-filter="unread"]');
+          next.focus({ preventScroll: true });
+        }
+      }));
+      root.querySelector('[data-read-all]').addEventListener('click', () => {
+        state.read = [...noteIds]; render(); persist();
+        root.querySelector('[data-note-announcement]').textContent = 'All notifications marked as read';
+        root.querySelector(`[data-filter="${state.filter}"]`).focus({ preventScroll: true });
+      });
+      root.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => { state.filter = button.dataset.filter; render(); persist(); }));
+      root.querySelector('[data-quiet]').addEventListener('click', () => {
+        state.quiet = !state.quiet; render(); persist();
+        root.querySelector('[data-note-announcement]').textContent = state.quiet ? 'Quiet mode on' : 'Quiet mode off';
+      });
+      window.addEventListener('resize', placeDialog);
+      window.addEventListener('openai:set_globals', event => {
+        const snapshot = event.detail && event.detail.globals && event.detail.globals.widgetState;
+        if (snapshot) { applySaved(snapshot); render(); }
+      });
+      applySaved(window.openai && window.openai.widgetState);
+      render();
+      if (globalThis.Tweak) {
+        const applyDesign = () => {
+          root.style.setProperty('--fh-bar-radius', `${design.corner}px`);
+          root.dataset.compact = String(design.compact);
+          root.dataset.motion = design.motion ? 'on' : 'off';
+          placeDialog();
+        };
+        const tweak = new Tweak({ container: bar, onChange: applyDesign });
+        tweak.addSlider(design, 'corner', { label: 'Corner radius', min: 14, max: 32, unit: 'px' });
+        tweak.addToggle(design, 'compact', { label: 'Compact spacing' });
+        tweak.addToggle(design, 'motion', { label: 'Soft motion' });
+      }
+    })();
+  </script>
+</div>
