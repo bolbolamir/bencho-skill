@@ -1,4 +1,4 @@
 interface:
   display_name: "Component Studio"
-  short_description: "Design components and save live gallery previews"
-  default_prompt: "Use $component-studio to build a component and save it to my gallery."
+  short_description: "Build components with a micro-interaction agent pass"
+  default_prompt: "Use $component-studio to build a component, run the micro-interaction agent pass, and save it to my gallery."
